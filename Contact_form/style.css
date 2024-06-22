@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans"); 
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    outline: none; 
+    font-family: Arial, sans-serif; 
+} 
+
+body { 
+    background: linear-gradient(135deg, #598eb1, #dea2f6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin: 0;
+    padding: 20px;
+    margin-top: 50px;
+} 
+
+.wrapper { 
+    width: 100%;
+    max-width: 550px;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px #3c203e;
+    box-sizing: border-box; 
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+} 
+
+.input_field {
+    margin-bottom: 15px;
+}
+
+.wrapper h2 { 
+    text-align: center; 
+   
+    text-transform: uppercase; 
+    letter-spacing: 3px; 
+    color: #332902; 
+} 
+
+.input_field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+	font-size: 0.7em;
+}
+
+.input_field input[type="text"], 
+.input_field select, 
+.wrapper textarea { 
+    border: 1px solid #e0e0e0; 
+    width: 100%; 
+    padding: 10px; 
+    border-radius: 5px;
+    font-size: 0.6em; 
+} 
+
+.wrapper textarea { 
+    resize: none; 
+    height: 80px; 
+} 
+
+.btn input[type="submit"] { 
+    border: 0px; 
+    margin-top: 15px; 
+    padding: 10px; 
+    text-align: center; 
+    width: 100%; 
+    background: linear-gradient(135deg, #598eb1, #dea2f6);
+    color: #fcfbf7; 
+    font-family: Tahoma, sans-serif;
+    text-transform: uppercase; 
+    letter-spacing: 5px; 
+    font-weight: bold; 
+    border-radius: 25px; 
+    cursor: pointer; 
+} 
+
+.btn input[type="submit"]:hover {
+    background-color: #5e3a5e;
+}
+
+#error_message { 
+    color: red;
+   
+    padding: 10px; 
+    text-align: center; 
+    font-size: 14px; 
+    transition: all 0.5s ease; 
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 15px;
+    }
+
+    .input_field input[type="text"], 
+    .input_field select, 
+    .wrapper textarea, 
+    .btn input[type="submit"] {
+        font-size: 0.4em;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper {
+        padding: 10px;
+    }
+
+    .input_field input[type="text"], 
+    .input_field select, 
+    .wrapper textarea, 
+    .btn input[type="submit"] {
+        font-size: 0.8em;
+        padding: 6px;
+    }
+
+    .wrapper h2 {
+        font-size: 1em;
+    }
+}

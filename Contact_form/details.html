@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Form Data</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Submitted Form Data</h2>
+        <div id="formData">
+        </div>
+    </div>
+    <script>
+        function getQueryParams() {
+            const params = {};
+            window.location.search.substring(1).split('&').forEach(pair => {
+                const [key, value] = pair.split('=');
+                params[decodeURIComponent(key)] = decodeURIComponent(value);
+            });
+            return params;
+        }
+
+        function displayFormData() {
+            const params = getQueryParams();
+            const formDataDiv = document.getElementById('formData');
+            for (const key in params) {
+                const p = document.createElement('p');
+                p.textContent = `${key.charAt(0).toUpperCase() + key.slice(1)}: ${params[key]}`;
+                formDataDiv.appendChild(p);
+            }
+        }
+
+        displayFormData();
+    </script>
+</body>
+</html>
